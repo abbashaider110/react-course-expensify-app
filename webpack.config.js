@@ -13,7 +13,7 @@ module.exports = (env) =>{
     return{
         entry: './src/app.js',  // we set this entry point so that webpack can know where to start from
         output:{
-            path: path.join(__dirname,'public'),
+            path: path.join(__dirname,'public', 'dist'),
             filename:'bundle.js'
         },
         module:{
@@ -50,7 +50,8 @@ module.exports = (env) =>{
         devtool: isProduction ? 'source-map' :'inline-source-map', // these are webpack dev tool, this tool is best for developement, it tell you exact line of error instead of bundle file
         devServer: {
             contentBase: path.join(__dirname,'public'), // we use contentBase and give path of public folder
-            historyApiFallback: true // its for if we have any 404 error, router sends it to html page
+            historyApiFallback: true, // its for if we have any 404 error, router sends it to html page
+            publicPath: '/dist/'
         }
         
     }

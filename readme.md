@@ -36,3 +36,13 @@ heroku --version
 heroku login
 heroku create nameoffile
 assign start script in packagejson
+git status
+git commit -m "production and server build"
+git push
+git push heroku master 
+
+
+yarn add chalk --dev
+
+
+git commit -a -m "message"

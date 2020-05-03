@@ -2,7 +2,6 @@
 
 exports[`should render  no expense list 1`] = `
 <div>
-  =
   <p>
      No Expense 
   </p>
@@ -11,7 +10,6 @@ exports[`should render  no expense list 1`] = `
 
 exports[`should render expense list 1`] = `
 <div>
-  =
   <ExpenseListItem
     amount={195}
     createdAt={0}

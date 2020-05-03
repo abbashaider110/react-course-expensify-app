@@ -44,5 +44,10 @@ git push heroku master
 
 yarn add chalk --dev
 
-
+add the dependencies diferent for dev and production
+add bundle and style files is dist folder, virtually and then by production, check lecture 137
 git commit -a -m "message"
+
+
+library
+yarn add numeral@latest

@@ -6,11 +6,11 @@ const webpack = require('webpack');
 const path = require('path'); // we added node module path, which is used to join two paths
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-process.env.NODE.ENV = process.env.NODE.ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-if(process.env.NODE.ENV === 'test'){
+if(process.env.NODE_ENV === 'test'){
 require('dotenv').config({path:'.env.test'});
-}else if (process.env.NODE.ENV === 'development'){
+}else if (process.env.NODE_ENV === 'development'){
     require('dotenv').config({path:'.env.development'});
 
 }

@@ -2,9 +2,18 @@
 // entry -> output
 //path is where the file is located
 //__dirname is which give the current location of directory
-
+const webpack = require('webpack');
 const path = require('path'); // we added node module path, which is used to join two paths
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+process.env.NODE.ENV = process.env.NODE.ENV || 'development';
+
+if(process.env.NODE.ENV === 'test'){
+require('dotenv').config({path:'.env.test'});
+}else if (process.env.NODE.ENV === 'development'){
+    require('dotenv').config({path:'.env.development'});
+
+}
 
 
 module.exports = (env) =>{
@@ -45,7 +54,18 @@ module.exports = (env) =>{
             }]
         },
         plugins:[
-        CSSExtract
+        CSSExtract,
+        new webpack.DefinePlugin({
+            'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
+            'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
+            'process.env.FIREBASE_DATABASE_URL': JSON.stringify(process.env.FIREBASE_DATABASE_URL),
+            'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
+            'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
+            'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
+            'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID),
+            'process.env.FIREBASE_MEASUREMENT_ID': JSON.stringify(process.env.FIREBASE_MEASUREMENT_ID),
+
+        })
         ],
         devtool: isProduction ? 'source-map' :'inline-source-map', // these are webpack dev tool, this tool is best for developement, it tell you exact line of error instead of bundle file
         devServer: {

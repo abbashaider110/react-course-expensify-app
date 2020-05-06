@@ -51,3 +51,23 @@ git commit -a -m "message"
 
 library
 yarn add numeral@latest
+
+Database
+We are using firebase as our database, main reason is their real time database and their authentication system
+At its core, its a NoSql database, 
+yarn add firebase@latest
+
+Redux-thunk
+yarn add redux-thunk@2.20
+
+
+yarn add redux-mock-store@latest  for store related tests
+
+yarn add --dev cross-env@latest, this cross-env lets us define enviroment variable in all OS 
+yarn add --dev dotenv@latest,  this is to read env files
+
+heroku config
+heroku config: set KEY=value
+heroku config: unset KEY
+
+

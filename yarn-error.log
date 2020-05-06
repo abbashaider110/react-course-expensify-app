@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Arooba\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add numeral@latest
+  C:\Program Files\nodejs\node.exe C:\Users\Arooba\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add firebase@latest
 
 PATH: 
   C:\WINDOWS\system32;C:\Windows\System32;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Arooba\AppData\Local\Microsoft\WindowsApps;C:\Users\Arooba\AppData\Local\Programs\Microsoft VS Code\bin;"C:\WINDOWS\system32;C:\Windows\System32";C:\Users\Arooba\AppData\Roaming\npm;C:\Program Files\heroku\bin
@@ -38,6 +38,7 @@ npm manifest:
       "moment": "^2.24.0",
       "node-sass": "^4.14.0",
       "normalize.css": "7.0.0",
+      "numeral": "^2.0.6",
       "raf": "3.3.2",
       "react": "^16.13.1",
       "react-addons-shallow-compare": "^15.6.2",
@@ -6823,6 +6824,11 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
     integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+  
+  numeral@^2.0.6:
+    version "2.0.6"
+    resolved "https://registry.yarnpkg.com/numeral/-/numeral-2.0.6.tgz#4ad080936d443c2561aed9f2197efffe25f4e506"
+    integrity sha1-StCAk21EPCVhrtnyGX7//iX05QY=
   
   nwsapi@^2.2.0:
     version "2.2.0"

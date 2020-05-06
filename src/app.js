@@ -9,8 +9,9 @@ import 'normalize.css/normalize.css';
 import AppRouter from './routers/AppRouter';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
-
+import './firebase/firebase';
 const store = configureStore();
+//import './playGround/promises';
 
 // store.dispatch(addExpense({description: 'water bill',amount:4500,createdAt:500}));
 // store.dispatch(addExpense({description: 'gas bill', amount:600,createdAt:1000}));

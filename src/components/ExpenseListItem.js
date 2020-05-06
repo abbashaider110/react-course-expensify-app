@@ -16,10 +16,10 @@ import {Link} from 'react-router-dom';
     </div>
 );
 
-const mapStateToProps = (state)=>{
-return {
-    expenses: state.expenses
-}
-};
+// const mapStateToProps = (state)=>{
+// return {
+//     expenses: state.expenses
+// }
+// };
 
 export default ExpenseListItem;

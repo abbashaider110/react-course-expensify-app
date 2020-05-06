@@ -10,7 +10,7 @@ export const ExpenseList = (props) =>(
         <p> No Expense </p>
         ) : (
             props.expenses.map((expense)=>{
-                return <ExpenseListItem key= {expense.id} {...expense}/> // key is needed cause we are transferring props to the child, by spreading(...expense) we get access of all properties of expense for expenselistitem
+                return <ExpenseListItem key = {expense.id} {...expense}/> // key is needed cause we are transferring props to the child, by spreading(...expense) we get access of all properties of expense for expenselistitem
             })
         )
     }

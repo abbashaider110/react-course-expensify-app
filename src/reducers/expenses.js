@@ -23,7 +23,9 @@ switch(action.type){
         }else{
             return expense;
         }
-        })
+        });
+    case 'SET_EXPENSES':
+        return action.expenses;
 
     default:
         return state;

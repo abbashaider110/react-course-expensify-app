@@ -5,11 +5,12 @@
 import {shallow} from 'enzyme';
 // import ReactShallowRenderer from 'react-test-renderer/shallow'; // shallow is just for components and not for childs
 import React from 'react';
-import Header from '../../components/Header';
+import {Header} from '../../components/Header';
+
 // import toJSON from 'enzyme-to-json';
 
 test('should render Header correctly',()=>{
-    const wrapper = shallow(<Header/>);
+    const wrapper = shallow(<Header startLogOut={() => {}}/>);
     expect(wrapper).toMatchSnapshot();
     // expect(wrapper.find('h1').text()).toBe('Expensify');
     // const renderer = new ReactShallowRenderer();
@@ -18,4 +19,10 @@ test('should render Header correctly',()=>{
 })
 //snapshot will help us to keep track of our changes
 
+test('should handle logout button', () =>{
+    const startLogOut = jest.fn();
+    const wrapper = shallow(<Header startLogOut={startLogOut}/>);
+    wrapper.find('button').simulate('Click');
+    expect(startLogOut).toHaveBeenCalled();
+})
 

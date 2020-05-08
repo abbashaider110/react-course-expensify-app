@@ -64,7 +64,6 @@ module.exports = (env) =>{
             'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
             'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID),
             'process.env.FIREBASE_MEASUREMENT_ID': JSON.stringify(process.env.FIREBASE_MEASUREMENT_ID)
-
         })
         ],
         devtool: isProduction ? 'source-map' :'inline-source-map', // these are webpack dev tool, this tool is best for developement, it tell you exact line of error instead of bundle file

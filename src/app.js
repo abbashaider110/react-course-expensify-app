@@ -52,7 +52,7 @@ ReactDOM.render(<LoadingPage/>,document.getElementById('app'));
 
 
 
-firebase.auth().onAuthStateChanged(user => {
+firebase.auth().onAuthStateChanged((user) => {
     if(user){
         store.dispatch(login(user.uid));
         store.dispatch(startSetExpenses()).then(() =>{

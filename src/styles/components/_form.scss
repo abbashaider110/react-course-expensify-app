@@ -1,0 +1,12 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    > * { // this means it will select all the direct child in form, it wont select button, because that is not a direct child, it is in div which is in form
+    margin-bottom: $m-size;
+    }
+}
+
+.form__error{
+    margin: 0 0 $m-size 0;
+    font-style: italic;
+}

@@ -71,3 +71,6 @@ heroku config: set KEY=value
 heroku config: unset KEY
 
 
+yarn add babel-polyfill@latest , it is for app to run in old browsers as well
+
+

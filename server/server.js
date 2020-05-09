@@ -14,7 +14,7 @@ res.sendFile(path.join(publicPath,'index.html'));
 
 
 
-app.listen(port ,() => { // we are assigning port to server
+app.listen(port,() => { // we are assigning port to server
 console.log('Server is up!');
 });
 

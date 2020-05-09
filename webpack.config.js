@@ -20,14 +20,14 @@ module.exports = (env) =>{
     const isProduction = env === 'production';
     const CSSExtract = new ExtractTextPlugin('styles.css');
     return{
-        entry: './src/app.js',  // we set this entry point so that webpack can know where to start from
+        entry: ['babel-polyfill','./src/app.js'],  // we set this entry point so that webpack can know where to start from
         output:{
             path: path.join(__dirname,'public', 'dist'),
             filename:'bundle.js'
         },
         module:{
             //module rules lets us set how we want to run our loader
-            rules:[{
+            rules: [{
                 loader: 'babel-loader', //it will load babel loader
                 test: /\.js$/, // which files we want to test
                 exclude: /node_modules/ // we dont want to include node modules

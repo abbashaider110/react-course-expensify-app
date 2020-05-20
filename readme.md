@@ -4,8 +4,7 @@ git add - Add files to stagging area
 git commit - Create a new commit with files from stagging area
 git log - View recent commits
 
-abbas_haider12@hotmail.com
-!1A2s3d4f!
+
 
 Use Git Bash for SSH
 ssh -keygen -t rsa -b 4096 -C "abbas_haider12@hotmail.com (t is type, b is size, C is comment)
